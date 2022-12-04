@@ -4,7 +4,7 @@ void print_array(int* p, int ptr[])
 {
     int i;
     for(i = 0; i < *p; i++) {
-        printf("%d ", *ptr+i);
+        printf("%d ", *(ptr+i));
     }
 }
 

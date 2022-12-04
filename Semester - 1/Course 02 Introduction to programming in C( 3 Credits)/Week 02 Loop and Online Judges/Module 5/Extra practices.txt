@@ -1,4 +1,0 @@
-Codeforces : 1A, 50A, 266A, 
-231A, 
-
-Hackerrank : C (Loop and conditions)
