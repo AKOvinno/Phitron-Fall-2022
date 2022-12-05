@@ -3,7 +3,7 @@
 int main()
 {
     char s[100];
-    int i, j, k, max, count = 0, max_index;
+    int i, j, k, count = 0;
     gets(s);
     int ara[122];
 
@@ -20,7 +20,7 @@ int main()
     }
 
     for(k = 1; k <= count; k++) {
-        max = ara[0];
+        int max = 0, max_index = 0;
         for(i = 97; i <= 122; i++) {
             if(ara[i] > max) {
                 max = ara[i];
