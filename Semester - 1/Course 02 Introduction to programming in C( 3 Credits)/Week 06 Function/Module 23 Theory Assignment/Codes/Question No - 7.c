@@ -11,6 +11,9 @@ double median(int n, int ara[])
             }
         }
     }
+    for(i = 0; i < n; i++) {
+        printf("%d ", ara[i]);
+    }
     if(n%2 != 0)
         return ara[n/2];
     else
