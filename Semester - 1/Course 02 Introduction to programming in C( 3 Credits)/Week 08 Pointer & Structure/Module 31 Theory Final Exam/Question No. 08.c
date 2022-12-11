@@ -1,4 +1,4 @@
-#include<stdio.h>
+/*#include<stdio.h>
 
 struct student
 {
@@ -26,7 +26,7 @@ int main()
 
     return 0;
 }
-/*
+*/
 #include<stdio.h>
 
 struct student
@@ -42,8 +42,9 @@ int main()
     info = &s1;
 
     //accessing and printing using arrow operator
-    printf("%d %0.2lf %d\n", info->roll, info->weight, info->age);
-
+    printf("roll = %d\nweight = %0.2lf\n", info->roll, info->weight);
+    //accessing and printing using dereference operator
+    printf("age = %d\n", (*info).age);
     return 0;
 }
-*/
+
