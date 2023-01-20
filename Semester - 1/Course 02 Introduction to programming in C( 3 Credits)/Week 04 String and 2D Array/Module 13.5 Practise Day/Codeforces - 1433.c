@@ -2,35 +2,30 @@
 
 int main()
 {
-    int t;
+    int t, i;
     scanf("%d", &t);
-    while(t) {
-        int n, i, same, flag_same = 0, largest_index, largest;
+    while(t--) {
+        int n, max;
         scanf("%d", &n);
         int ara[n];
         for(i = 0; i < n; i++) {
             scanf("%d", &ara[i]);
         }
+        max = ara[0];
         for(i = 0; i < n; i++) {
-            same = ara[0];
-            if(ara[i] != same) {
-                flag_same = 1;
+            if(ara[i] > max) {
+                max = ara[i];
             }
         }
-        if(!flag_same) {
-            printf("-1\n");
+        int index = -1;
+        for(i = 0; i < n; i++) {
+            if(ara[i] != max)
+                continue;
+            if(i > 0 && ara[i-1] != max) index = i+1;
+            if(i < n-1 && ara[i+1] != max) index = i+1;
         }
-        else {
-            largest = ara[0];
-            for(i = 0; i < n; i++) {
-                if(ara[i] >= largest) {
-                    largest = ara[i];
-                    largest_index = i;
-                }
-            }
-            printf("%d\n", largest_index+1);
-        }
-        t--;
+        printf("%d\n", index);
     }
     return 0;
 }
+
