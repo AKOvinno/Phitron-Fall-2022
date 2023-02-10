@@ -1,55 +1,45 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class student
+class Person
 {
 public:
     string name;
-    int std_id;
-    int age;
-    string fathers_name;
-    string mothers_name;
-    student ()
+    Person *father, *mother;
+    Person()
     {
-        // empty constructor for constructor overloading purpose
+        father = NULL;
+        mother = NULL;
     }
-    student (string name, int std_id, int age, string fathers_name, string mothers_name) // it's called constructor. It sets the variables of the class
+    Person(string name, string fatherName, string motherName)
     {
-        this->name = name;  // name from class accessing name from parameter using this
-        this->std_id = std_id;
-        this->age = age;
-        this->fathers_name = fathers_name;
-        this->mothers_name = mothers_name;
-    }
-    student(string s, int id, int ag) // Constructor overloading
-    {
-        name = s;
-        std_id = id;
-        age = ag;
-    }
+        this -> name = name;
 
-    void print_information()
-    {
-        cout << "Name: " << name  << "\nID: " << std_id << "\nAge: " << age << "\nFather's name: " << fathers_name << "\nMother's name: " << mothers_name << endl;
-        cout << endl;
+        father = new Person;
+        father -> name = fatherName;
+
+        mother = new Person;
+        mother -> name = motherName;
     }
-    ~student() // This is a destructor which is needed (when we allocate memory from heap using new) for deleting the memory we allocated to free it or deallocate it
+    void print_info()
     {
-        cout << "Destructor Called\n";
-        print_information();
+        cout << "Name: " << name << "\n";
+        cout << "Father's Name: " << father->name << "\n";
+        cout << "Mother's Name: " << mother->name << "\n";
+    }
+    ~Person()
+    {
+        cout << "Called\n";
+        if(father != NULL)
+            delete father;
+        if(mother != NULL)
+            delete mother;
     }
 };
-
 int main()
 {
-    student s1 ("Ovinno", 1713, 25, "Md. Sirajul Haque", "Kamrun Naher Lily");
-    student s2 ("Sobuj", 1733, 25);
-
-    s1.print_information();
-    s2.print_information();
-
-    student s3;
-    s3.print_information();
+    Person p("Ovinno", "MD. Sirajul Haque", "Kamrun Naher Lily");
+    p.print_info();
 
     return 0;
 }

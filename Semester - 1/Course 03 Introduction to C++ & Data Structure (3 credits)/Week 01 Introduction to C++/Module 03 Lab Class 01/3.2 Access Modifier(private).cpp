@@ -3,13 +3,13 @@ using namespace std;
 
 class Student
 {
-public:
+private:
     string name;
     int std_id;
     int age;
     string fathers_name;
     string mothers_name;
-
+public:
     void print_information()
     {
         cout << "Name: " << name << "\n";
@@ -18,12 +18,23 @@ public:
         cout << "Father's Name: " << fathers_name << "\n";
         cout << "Mother's Name: " << mothers_name << "\n";
     }
+    void setInformation(string s, int id, int ag, string fatherName, string motherName) // setting information to access private properties
+    {
+        name = s;
+        std_id = id;
+        age = ag;
+        fathers_name = fatherName;
+        mothers_name = motherName;
+    }
 };
 
 int main()
 {
-    Student s = {"Ovinno", 1713, 25, "MD. Sirajul Haque", "Kamrun Naher Lily"};
-    Student s2 = {"Sobuj", 1733, 25, "MD. Shahin Ahmed", "Mst. Shahinur Ahmed"};
+    Student s, s2;
+
+    s.setInformation("Ovinno", 1713, 25, "MD. Sirajul Haque", "Kamrun Naher Lily");
+    s2.setInformation("Sobuj", 1733, 25, "MD. Shahin Ahmed", "Mst. Shahinur Ahmed");
+
     s.print_information();
     cout << "\n";
     s2.print_information();

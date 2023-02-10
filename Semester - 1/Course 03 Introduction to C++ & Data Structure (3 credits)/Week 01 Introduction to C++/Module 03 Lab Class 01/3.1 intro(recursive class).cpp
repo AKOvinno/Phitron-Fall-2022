@@ -1,12 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class person
+class Person
 {
 public:
     string name;
-    person *father, *mother;
-
+    Person *father, *mother;
     void print_info()
     {
         cout << "Name: " << name << "\n";
@@ -14,21 +13,18 @@ public:
         cout << "Mother's Name: " << mother->name << "\n";
     }
 };
-
 int main()
 {
-    person p;
-
-    p.father = new person;
-    p.mother = new person;
+    Person p;
+    p.father = new Person;
+    p.mother = new Person;
 
     p.name = "Ovinno";
-    p.father->name = "Md. Sirajul Haque";
+    p.father->name = "MD. Sirajul Haque";
     p.mother->name = "Kamrun Naher Lily";
 
     p.print_info();
 
-    delete p.father;
-    delete p.mother;
     return 0;
 }
+

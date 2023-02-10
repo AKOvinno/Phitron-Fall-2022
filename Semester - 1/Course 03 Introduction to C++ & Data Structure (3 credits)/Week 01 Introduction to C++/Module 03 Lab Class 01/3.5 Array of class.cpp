@@ -9,23 +9,35 @@ public:
     int age;
     string fathers_name;
     string mothers_name;
+    Student()
+    {
 
+    }
+    Student(string s, int id, int ag)
+    {
+        name = s;
+        std_id = id;
+        age = ag;
+    }
     void print_information()
     {
         cout << "Name: " << name << "\n";
         cout << "Student ID: " << std_id << "\n";
         cout << "Age: " << age << "\n";
-        cout << "Father's Name: " << fathers_name << "\n";
-        cout << "Mother's Name: " << mothers_name << "\n";
     }
 };
 
 int main()
 {
-    Student s = {"Ovinno", 1713, 25, "MD. Sirajul Haque", "Kamrun Naher Lily"};
-    Student s2 = {"Sobuj", 1733, 25, "MD. Shahin Ahmed", "Mst. Shahinur Ahmed"};
-    s.print_information();
-    cout << "\n";
-    s2.print_information();
+    Student s[10];
+    for(int i = 0; i < 10; i++) {
+        s[i] = Student("Ovinno", i+1, 25);
+    }
+    for(int i = 0; i < 10; i++) {
+        s[i].print_information();
+        cout << "\n";
+    }
     return 0;
 }
+
+
