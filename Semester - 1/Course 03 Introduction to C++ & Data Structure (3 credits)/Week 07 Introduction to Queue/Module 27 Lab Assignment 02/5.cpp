@@ -96,15 +96,18 @@ public:
 
 int main()
 {
-	Deque<int> dq;
-	dq.push_front(1);
-	dq.push_back(2);
-	dq.push_front(3);
-	dq.push_back(4);
-	while (!dq.is_empty())
-	{
-    	cout << dq.front() << " ";
-    	dq.pop_front();
-	}
+	Deque<int> d;
+	d.push_front(1);
+	d.push_back(2);
+	d.push_front(3);
+	d.push_back(4);
+
+	cout << "Back: " << d.back() << "\tFront: " << d.front() << "\n";
+	d.push_front(5);
+	cout << "Back: " << d.back() << "\tFront: " << d.front() << "\n";
+	d.pop_front();
+	cout << "Back: " << d.back() << "\tFront: " << d.front() << "\n";
+	d.pop_back();
+	cout << "Back: " << d.back() << "\tFront: " << d.front() << "\n";
 	return 0;
 }
