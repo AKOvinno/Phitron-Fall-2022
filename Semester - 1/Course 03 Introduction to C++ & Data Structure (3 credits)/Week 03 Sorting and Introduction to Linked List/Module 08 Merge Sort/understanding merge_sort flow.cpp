@@ -59,12 +59,12 @@ vector <int> merge_sort(vector <int> a)
             sorted_a.push_back(sorted_c[index2]);
             index2++;
         }
-        cout << "Printing after merging: ";
-        for(int k = 0; k < sorted_a.size(); k++) {
-            cout << sorted_a[k] << " ";
-        }
-        cout << "\n";
     }
+    cout << "Printing after merging: ";
+    for(int k = 0; k < sorted_a.size(); k++) {
+        cout << sorted_a[k] << " ";
+    }
+    cout << "\n";
     return sorted_a;
 }
 
