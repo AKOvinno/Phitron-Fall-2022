@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Creation of node type object
 class node
 {
 public:
@@ -20,10 +21,23 @@ public:
     // Creates a new node with data = value and next = NULL
     node* CreateNewNode(int value)
     {
-        node *newnode = new node;
+        node* newnode = new node;
         newnode -> data = value;
         newnode -> nxt = NULL;
         return newnode;
+    }
+    void InsertAtTail(int value)
+    {
+        node* newnode = CreateNewNode(value);
+        if(head == NULL) {
+            head = newnode;
+            return;
+        }
+        node* temp = head;
+        while(temp -> nxt != NULL) {
+            temp = temp -> nxt;
+        }
+        temp -> nxt = newnode;
     }
     // Insert new value at Head
     void InsertAtHead(int value)
@@ -62,7 +76,7 @@ public:
         }
         return -1;
     }
-    // Search all possible occurrance
+    // Search all possible occurrence
     void SearchAllValue(int value)
     {
         node* a = head;
@@ -84,6 +98,9 @@ int main()
     l.InsertAtHead(30);
     l.InsertAtHead(20);
     l.InsertAtHead(30);
+    l.InsertAtTail(100);
+    l.InsertAtTail(200);
+    l.InsertAtTail(5);
 
     l.Traverse();
     cout << "10 is found at " << l.SearchDistinctValue(10)+1 << "\n";
