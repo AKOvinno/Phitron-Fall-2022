@@ -1,105 +1,114 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 class node
 {
 public:
     int data;
     node* nxt;
 };
-
 class LinkedList
 {
-private:
-    node* head;
-    int size;
 public:
+    node* head;
+    int Size;
     LinkedList()
     {
         head = NULL;
-        size = 0;
+        Size = 0;
     }
-
+    node* CreateNewNode(int value)
+    {
+        node* newnode = new node;
+        newnode -> data = value;
+        newnode -> nxt = NULL;
+        Size++;
+        return newnode;
+    }
     void InsertAtHead(int value)
     {
-        node* newNode = new node();
-        newNode->data = value;
-        newNode->nxt = head;
-        head = newNode;
-        size++;
+        node* a = CreateNewNode(value);
+        if(head == NULL) {
+            head = a;
+            return;
+        }
+        a -> nxt = head;
+        head = a;
     }
-
-    int getSize()
+    void Traverse()
     {
-        return size;
+        node* a = head;
+        cout << "Linked List Traversing: ";
+        while(a != NULL) {
+            cout << a -> data << " ";
+            a = a -> nxt;
+        }
+        cout << "\n";
+        return;
     }
-
     int getValue(int index)
     {
-        if (index >= size) return -1;
-        node* current = head;
-        for (int i = 0; i < index; i++)
-        {
-            current = current->nxt;
+        if(index > Size)
+            return -1;
+        node* a = head;
+        int idx = 1;
+        while(idx != index) {
+            a = a -> nxt;
+            idx++;
         }
-        return current->data;
+        return a -> data;
     }
-
+//    void printReverse()
+//    {
+//        node* current = head;
+//        if(current == NULL)
+//            return;
+//        head = head -> nxt;
+//        printReverse();
+//        cout << current -> data << " ";
+//    }
     void printReverse(node* current)
     {
-        if (current == NULL) return;
-        printReverse(current->nxt);
-        cout << current->data << " ";
+        if(current == NULL)
+            return;
+        printReverse(current -> nxt);
+        cout << current -> data << " ";
     }
-
     void printReverse()
     {
         printReverse(head);
-        cout<<endl;
+        cout << "\n";
     }
-
-    void Traverse()
+    int getSize()
     {
-        node* current = head;
-        while (current != NULL)
-        {
-            cout << current->data << " ";
-            current = current->nxt;
-        }
-        cout << endl;
+        cout << "Size of the linked list is: " << Size << "\n";
+        return 0;
     }
-
     void swapFirst()
     {
-        if (size < 2) return;
-        node* firstNode = head;
-        node* secondNode = head->nxt;
-        firstNode->nxt = secondNode->nxt;
-        secondNode->nxt = firstNode;
-        head = secondNode;
+        if(Size < 2)
+            return;
+        node* a = head;
+        node* b = head -> nxt;
+        a -> nxt = b -> nxt;
+        b -> nxt = a;
+        head = b;
     }
 };
-
 int main()
 {
     LinkedList l;
-    cout<<l.getSize()<<"\n";
     l.InsertAtHead(5);
-    cout<<l.getSize()<<"\n";
-    l.InsertAtHead(6);
-    l.InsertAtHead(30);
-    cout<<l.getSize()<<"\n";
+    l.InsertAtHead(10);
+    l.InsertAtHead(15);
     l.InsertAtHead(20);
-    l.InsertAtHead(30);
-
-    cout<<l.getValue(2)<<"\n";
-
-    cout<<l.getValue(6)<<"\n";
-
-    l.printReverse();
-    l.Traverse();
+    l.InsertAtHead(25);
     l.swapFirst();
     l.Traverse();
+    l.getSize();
+    cout << "Value in index 2 is: " << l.getValue(2) << "\n";
+    cout << "Printing in reverse order: ";
     l.printReverse();
-
+    l.Traverse();
     return 0;
 }
