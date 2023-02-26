@@ -58,15 +58,6 @@ public:
         }
         return a -> data;
     }
-//    void printReverse()
-//    {
-//        node* current = head;
-//        if(current == NULL)
-//            return;
-//        head = head -> nxt;
-//        printReverse();
-//        cout << current -> data << " ";
-//    }
     void printReverse(node* current)
     {
         if(current == NULL)

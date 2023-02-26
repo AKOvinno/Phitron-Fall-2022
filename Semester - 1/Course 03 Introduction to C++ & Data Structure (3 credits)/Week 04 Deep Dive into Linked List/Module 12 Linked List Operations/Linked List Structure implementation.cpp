@@ -26,6 +26,7 @@ public:
         newnode -> nxt = NULL;
         return newnode;
     }
+    // Insert new value at tail
     void InsertAtTail(int value)
     {
         node* newnode = CreateNewNode(value);
