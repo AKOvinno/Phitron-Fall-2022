@@ -60,17 +60,18 @@ public:
         if(head == NULL)
             return;
         node* current = head;
-        int current_index = 0;
-        while(current_index != sz - 1) {
+        int current_index = 1;
+        while(current_index != sz) {
             current = current -> nxt;
             current_index++;
         }
+        node* tail = current;
         node* temp = head;
         while(temp != NULL) {
             swap(temp -> nxt, temp -> prv);
             temp = temp -> prv;
         }
-        head = current;
+        head = tail;
         return;
     }
     int getSize()

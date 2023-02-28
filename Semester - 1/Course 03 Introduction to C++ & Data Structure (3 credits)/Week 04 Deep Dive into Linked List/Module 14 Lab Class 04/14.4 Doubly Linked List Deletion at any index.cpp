@@ -61,6 +61,7 @@ public:
         current -> nxt = newnode;
         return;
     }
+    // deletes at any index in O(n)
     void DeleteAtAnyIndex(int index)
     {
         if(index < 1 || index > sz + 1)
@@ -75,15 +76,15 @@ public:
             current_index++;
             current = current -> nxt;
         }
-        node* mid = current -> nxt;
-        current -> nxt = mid -> nxt;
-        node* last = mid -> nxt;
+        node* deleted = current -> nxt;
+        current -> nxt = deleted -> nxt;
+        node* last = deleted -> nxt;
         if(last == NULL) {
-            delete mid;
+            delete deleted;
             sz--;
             return;
         }
-        delete mid;
+        delete deleted;
         sz--;
         return;
     }
@@ -126,7 +127,8 @@ int main()
     dl.Traverse();
     dl.DeleteAtAnyIndex(2);
     dl.Traverse();
-    dl.DeleteAtAnyIndex(4);
+    dl.DeleteAtAnyIndex(3);
+    dl.DeleteAtAnyIndex(2);
     dl.Traverse();
     cout << "Size: " << dl.getSize() << "\n";
     return 0;
