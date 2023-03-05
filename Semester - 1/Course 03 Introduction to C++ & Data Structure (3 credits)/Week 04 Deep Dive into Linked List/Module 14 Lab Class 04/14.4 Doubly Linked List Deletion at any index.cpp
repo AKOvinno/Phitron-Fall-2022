@@ -95,6 +95,8 @@ public:
         node* current = head;
         head = head -> nxt;
         delete current;
+        if(head != NULL)
+            head -> prv = NULL;
         sz--;
         return;
     }
