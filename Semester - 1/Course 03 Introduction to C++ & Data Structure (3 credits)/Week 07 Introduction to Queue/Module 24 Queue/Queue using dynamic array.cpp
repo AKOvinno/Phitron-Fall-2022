@@ -19,26 +19,26 @@ public:
     }
     void remove_circular()
     {
-        if(l > r) {
-            int *tmp = new int[array_cap];
-            int idx = 0;
-            for(int i = 1; i < array_cap; i++) {
-                tmp[idx] = a[i];
-                idx++;
-            }
-            for(int i = 0; i <= r; i++) {
-                tmp[idx] = a[i];
-                idx++;
-            }
-            swap(tmp, a);
-            l = 0;
-            r = array_cap - 1;
-            delete [] tmp;
+        int *tmp = new int[array_cap];
+        int idx = 0;
+        for(int i = 1; i < array_cap; i++) {
+            tmp[idx] = a[i];
+            idx++;
         }
+        for(int i = 0; i <= r; i++) {
+            tmp[idx] = a[i];
+            idx++;
+        }
+        swap(tmp, a);
+        l = 0;
+        r = array_cap - 1;
+        delete [] tmp;
     }
     void increase_size()
     {
-        remove_circular();
+        if(l > r) {
+            remove_circular();
+        }
         int *tmp = new int[array_cap * 2];
         for(int i = 0; i < array_cap; i++) {
             tmp[i] = a[i];
