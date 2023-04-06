@@ -2,7 +2,7 @@
 
 Graph Representation
 ==================
-Topic: Adjacency Matrix
+Topic: Adjacency List
 
 0 ------ 1
          /   \
@@ -48,6 +48,7 @@ int main()
     int nodes = 4;
     vector <int> adj_list[nodes];
 
+    // O(E) -> if no. of edge if low
     // O(E * 2) = (E) // Worst Case = O(n^2)
     adj_list[0] = {1};
     adj_list[1] = {0, 2, 3};
