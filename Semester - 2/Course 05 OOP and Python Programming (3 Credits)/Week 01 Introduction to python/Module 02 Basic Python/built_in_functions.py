@@ -1,0 +1,10 @@
+#highest = max(45, 98, 46, 87, 96, 41)
+highest = max([45, 98, 46, 87, 96, 41])
+smallest = min([45, 98, 46, 87, 96, 41])
+print("Highest: ", highest)
+print("Smallest: ", smallest)
+count = len([45, 98, 46, 87, 96, 41])
+total = sum([45, 98, 46, 87, 96, 41])
+print("Total Sum: ", total)
+print("Array Length: ", count)
+
