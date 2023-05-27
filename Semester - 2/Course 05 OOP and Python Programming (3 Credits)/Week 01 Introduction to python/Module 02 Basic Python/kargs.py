@@ -10,9 +10,10 @@ def famous_name(first, last, **addition):
 name = famous_name(first = "Taher", last = "Ali", title = "hujur", addition = "Sheikh")
 print("Famous Name:", name)
 
-print("kargs again: ")
-def my_function(**kwargs):
-	for key, value in kwargs.items():
-             print(key, value)
+print("Another Example: ")
+def display_person(**kwargs):
+    for key,value in kwargs.items():
+        print(f"{key}: {value}")
 
-my_function(Name ='Rahim', age=25, city='Dhaka')
+
+display_person(Name="Amir Khan", Age="45")
