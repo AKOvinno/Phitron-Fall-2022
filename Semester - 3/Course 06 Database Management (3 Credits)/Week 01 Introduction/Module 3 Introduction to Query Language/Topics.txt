@@ -1,0 +1,6 @@
+1. Query Language, SQL
+2. MySQL Download and Install
+3. Data Types
+4. CREATE Table
+5. RENAME Table
+6. DROP Table

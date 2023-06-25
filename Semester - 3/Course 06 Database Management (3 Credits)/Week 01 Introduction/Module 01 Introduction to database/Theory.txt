@@ -1,0 +1,22 @@
+1. Introduction to Database (Data is unorganized and information is organized)
+	Database properties:
+		i) Field
+		ii) Record
+		iii)Values(data)
+2. Types of Database 
+	There are two types of Database:
+		i) Relational
+		ii) Non-Relational
+3. Tables and Keys (Field == key)
+	There are three types of keys:
+		i) Primary Key (Unique for everyone)
+		ii) Composite key(Two column combines and makes a primary key)
+		iii) Foreign Key(One table primary key is another's table's normal key)
+4. Database Management System (Actually DBMS menas RDBMS)
+5. Relational Database Management System
+6. Database Relation
+	There are 3 types of relation:
+		i) One to One
+		ii) One to Many / Many to One
+		iii) Many to Many
+

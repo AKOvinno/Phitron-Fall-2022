@@ -1,0 +1,16 @@
+1. Database Design Strategies
+	i) Top Down Approach
+	ii) Bottom Up Approach
+	iii) Requirement Analysis
+	iv) Pitfalls to avoid
+
+2. ER Diagram
+	i) Model Introduction
+	ii) Relationship (Cardinality, Connectivity)
+	iii) Participation
+	iv) Notations
+	v) Strong and Weak Entity
+	vi) Primary Key
+	vii) Design Practices
+	viii) Specialization, Generalization
+	ix) Aggregation
