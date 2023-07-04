@@ -1,0 +1,10 @@
+1. SELECT Statement(Review)
+2. ORDER BY
+3. DISTINCT
+4. LIMIT
+5. Arithmetic Operator +, -, *, /, %
+6. Comparison Operator =, !=, >, >=, <, <=, BETWEEN
+7. Logical Operator AND, OR
+8. Logical Operator IN, NOT IN
+9. Logical Operator LIKE
+10. AS
