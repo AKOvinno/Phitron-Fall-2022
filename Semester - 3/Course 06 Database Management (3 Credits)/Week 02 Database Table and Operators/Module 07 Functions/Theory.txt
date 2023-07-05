@@ -1,0 +1,20 @@
+1. SELECT Statement (Review)
+2. Functions
+	i. UPPER
+	ii. LOWER
+	iii. CONCAT
+	iv. PDW
+	v. GREATEST
+	vi. LEAST
+	vii. LOG
+	viii. EXP
+	ix. RAND
+3. Group Functions
+	i. COUNT
+	ii. MIN
+	iii. MAX
+	iv. SUM
+	v. AVG
+4. GROUP BY
+5. HAVING
+6. ALTER Table
