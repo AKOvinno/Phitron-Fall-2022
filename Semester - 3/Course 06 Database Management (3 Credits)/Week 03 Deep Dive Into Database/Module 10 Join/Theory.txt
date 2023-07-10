@@ -1,0 +1,6 @@
+1. Joining Tables
+2. JOIN Statement
+3. INNER JOIN
+4. OUTER JOIN
+5. LEFT JOIN
+6. RIGHT JOIN
