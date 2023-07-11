@@ -1,0 +1,18 @@
+Phitron (Database)
+	1. Student_info (Table)
+		i. Roll (Column)
+		ii. Name
+		iii. Phone
+		iv. Email
+	2. DS_exam (Table)
+		i. Roll
+		ii. Marks
+		iii. Course_code
+	3. Algo_exam (Table)
+		i. Roll
+		ii. Marks
+		iii. Course_code
+	4. OOP_exam (Table)
+		i. Roll
+		ii. Marks
+		iii. Course_code
