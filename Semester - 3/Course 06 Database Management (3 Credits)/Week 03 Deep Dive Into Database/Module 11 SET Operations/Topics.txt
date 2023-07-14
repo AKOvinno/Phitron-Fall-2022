@@ -1,0 +1,6 @@
+1. SET Operations
+2. UNION
+3. UNION ALL
+4. On Delete
+5. Triggers
+6. Date and Time
