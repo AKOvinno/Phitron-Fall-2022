@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Third Project</title>
+    <link rel="stylesheet" href="{% static 'FirstApp/CSS/firstapp.css' %}" />
+  </head>
+  <body>
+    <h1>We are inside first app Contact</h1>
+    <h1>Author name: {{name}}</h1>
+    <img
+      src="{% static 'FirstApp/image/imageone.jpg' %}"
+      alt="Riverside Image"
+    />
+
+    <!-- if-else in django template -->
+
+    <!-- Example: 1 -->
+    <!-- {% if age >= 18 %}
+    <p>You can take driving license</p>
+    {% else %}
+    <p>You are a child!</p>
+    {% endif %} -->
+
+    <!-- Example: 2
+    {% if marks >= 80 %}
+    <p>You have gotten A+</p>
+    {% elif marks >= 70 and marks <= 79 %}
+    <p>You have gotten A</p>
+    {% elif marks >= 40 and marks <= 69 %}
+    <p>You have passed</p>
+    {% else %}
+    <p>You are failed</p>
+    {% endif %} -->
+
+    <!-- <table border="1" width="500">
+      <tr>
+        <th>ID</th>
+        <th>Course</th>
+        <th>Teacher</th>
+      </tr>
+      {% for i in courses %}
+      <tr>
+        <br />
+        <td>{{i.id}}</td>
+        <td>{{i.course}}</td>
+        <td>{{i.teacher}}</td>
+        {% endfor %}
+      </tr>
+    </table> -->
+
+    <!-- Filters in DTL -->
+
+    <!-- Add Value -->
+    <h2>{{marks | add:"2"}}</h2>
+    <!-- Divisible Check -->
+    <h2>{{marks | divisibleby:"2"}}</h2>
+    <!-- Length  -->
+    <h2>{{name | length }}</h2>
+    <!-- Word Count -->
+    <h2>{{name | wordcount }}</h2>
+    <!-- Truncate words  -->
+    <h2>{{blog | truncatewords:5 }}</h2>
+    <h2>{{name | truncatechars:5 }}</h2>
+    <!-- Make List  -->
+    <h2>{{name | make_list }}</h2>
+    <!-- Upper Case  -->
+    <h2>{{name | upper }}</h2>
+    <!-- Lower Case  -->
+    <h2>{{name | lower }}</h2>
+    <!-- Join -->
+    <h2>{{list | join:"," }}</h2>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/first.css' %}" />
+  </head>
+  <body>
+    <h1>This is my first ever template in Django</h1>
+    <button><a href="/first_app/contact">Phitron</a></button>
+    <br />
+    <img src="{% static 'image/riverside_one.jpg' %}" alt="Riverside Image" />
+    <script src="{% static 'js/index.js' %}"></script>
+  </body>
+</html>

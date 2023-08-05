@@ -1,0 +1,40 @@
+{% extends 'base.html' %} 
+{% block title %} Form page {% endblock %} 
+{% block content %}
+{% comment %} here action means we are sending it to about page {% endcomment %}
+<div style="width: 50%; height: 500px; margin: auto" class="pt-5">
+  <h3> Movie Rating Form </h3>
+  <form method="post" action="/first_app/about/">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="exampleInputName" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputName"
+        aria-describedby="nameHelp"
+        name = "username"
+      />
+    </div> 
+    <div class="mb-3">
+      <label for="exampleInputEmail" class="form-label">Email Address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="nameHelp"
+        name = "email"
+      />
+    </div>
+    <select class="form-select" aria-label="Default select example" name="select">
+      <option selected>Ratings</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}
