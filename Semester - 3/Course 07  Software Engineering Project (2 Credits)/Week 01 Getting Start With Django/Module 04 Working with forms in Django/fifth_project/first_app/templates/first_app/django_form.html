@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+{% block title %} Django-Form {% endblock %}
+{% block content %}
+{% load crispy_forms_tags %} 
+<form method="post" style="width: 50%; height: 500px; margin:auto; " class="pt-4" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form | crispy}} 
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+</form>
+{% endblock %}
+
+{% comment %} 
+1. here as_p means it will show in paragraph format 
+2. load imports from cripsy_forms_tags
+{% endcomment %}
