@@ -6,5 +6,7 @@ urlpatterns = [
     path('', views.home, name = "homepage"),
     path('about/', views.about, name = "aboutpage"),
     path('form/', views.submit_form, name = "submit_form"),
-    path('django_form/', views.DjangoForm, name = "django_form"),
+    # path('django_form/', views.django_form, name = "django_form"),
+    # path('django_form/', views.StudentForm, name = "django_form"),
+    path('django_form/', views.PasswordValidation, name = "django_form"),
 ]

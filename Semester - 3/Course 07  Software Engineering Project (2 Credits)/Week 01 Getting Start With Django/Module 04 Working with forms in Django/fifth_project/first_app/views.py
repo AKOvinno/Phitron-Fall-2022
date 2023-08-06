@@ -1,7 +1,6 @@
 from django.shortcuts import render
 
-from . forms import contactForm
-
+from . forms import contactForm, StudentData, passwordValidationProject
 
 # Create your views here.
 def home(request):
@@ -23,13 +22,32 @@ def DjangoForm(request):
     if request.method == 'POST':
         form = contactForm(request.POST, request.FILES) # request.POST give form values
         if form.is_valid():
-            file = form.cleaned_data['file']
-            with open('./first_app/upload/' + file.name, 'wb+') as destination:
-                for chunk in file.chunks(): # chunks is smaller version of file
-                    destination.write(chunk)
+            # file = form.cleaned_data['file']
+            # with open('./first_app/upload/' + file.name, 'wb+') as destination:
+            #     for chunk in file.chunks(): # chunks is smaller version of file
+            #         destination.write(chunk)
             print(form.cleaned_data) # here cleaned_data will show values
-            return render(request, './first_app/django_form.html', {'form':form})
+            #return render(request, './first_app/django_form.html', {'form':form})
     else:
         form = contactForm()
     return render(request, './first_app/django_form.html', {'form':form}) 
-         
+
+# cleaning an validating from data
+def StudentForm(request):
+    if request.method == 'POST':
+        form = StudentData(request.POST, request.FILES)
+        if form.is_valid():
+            print(form.cleaned_data)
+    else:
+        form = StudentData()
+    return render(request, './first_app/django_form.html', {'form':form})
+ 
+def PasswordValidation(request):
+    if request.method == 'POST':
+        form = passwordValidationProject(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data)
+    else:
+        form = passwordValidationProject()
+    return render(request, './first_app/django_form.html', {'form':form}) 
+    
