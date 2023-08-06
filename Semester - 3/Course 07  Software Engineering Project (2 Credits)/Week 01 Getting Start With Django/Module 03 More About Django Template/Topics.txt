@@ -1,0 +1,8 @@
+3.1. Working with static file inside project
+3.2. Working with static file inside application
+3.3. Static files vs Media files configuration
+3.4. Adding bootstrap to django project
+3.5. Using URL tag in our django project
+3.6. Introduction to template inheritance
+3.7. Template inheritance-code
+3.8. Creating custom template and template tags

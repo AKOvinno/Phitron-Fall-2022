@@ -1,0 +1,9 @@
+5.1. Introduction to Django Models
+5.2. Creating a Model in Django
+5.3. Showing Model Data using VS Code and DB Browser
+5.4. Creating Superuser and Accessing Admin Panel
+5.5. Showing Model data to frontend
+5.6. Deleting Model Data from frontend
+5.7. Introduction to Model Form in Django
+5.8. Creating form using Model Form
+5.9. Saving Model Form data to database

@@ -82,5 +82,4 @@ class passwordValidationProject(forms.Form):
             raise forms.ValidationError("Password doesn't match")
         if len(value_name) < 15:
             raise forms.ValidationError("Name must be at least 15 chars")
-        return cleaned_data 
-    
+        return cleaned_data
