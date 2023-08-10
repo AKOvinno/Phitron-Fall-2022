@@ -15,7 +15,8 @@
         <th scope="col">Category</th>
         <th scope="col">First Publication</th>
         <th scope="col">Last Publication</th>
-        <th scope="col">Action</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -31,9 +32,10 @@
           <a href="{% url 'edit_book' id=item.id %}" class="btn btn-warning"
             >Edit</a
           >
+        </td>
+        <td>
           <a href="{% url 'delete_book' id=item.id %}" class="btn btn-danger"
             >Delete</a
-          >
         </td>
       </tr>
       {% endfor %}
