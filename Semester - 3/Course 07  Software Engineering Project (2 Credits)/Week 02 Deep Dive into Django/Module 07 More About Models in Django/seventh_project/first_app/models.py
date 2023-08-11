@@ -69,4 +69,30 @@ class Passport(models.Model):
     page = models.IntegerField()
     validity = models.IntegerField()
     
+# one to many relationship
+class Post(models.Model):
+    user = models.ForeignKey(Person, on_delete=models.SET_NULL, null=True)
+    post_cap = models.CharField(max_length=30)
+    post_details = models.CharField(max_length=100)
+    
+# many to many relationship
+class Student(models.Model):
+    name = models.CharField(max_length=30)
+    roll = models.IntegerField()
+    class_name = models.CharField(max_length=10)
+    def __str__(self):
+        return self.name
+    
+class Teacher(models.Model):
+    #on_delete=models.CASCADE is not allowed
+    student = models.ManyToManyField(Student, related_name='teachers')
+    name = models.CharField(max_length=30)
+    subject = models.CharField(max_length=20)
+    mobile = models.CharField(max_length=11)
+    def student_list(self):
+        return ",".join([str(i) for i in self.student.all()])
+    
+
+    
+    
     
