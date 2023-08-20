@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %} Login {% endblock %}
+
+{% block body %}
+
+<br><br>
+<div
+  style="
+    width: 50%;
+    margin: auto;
+    background: rgb(218, 227, 241);
+    padding: 20px;
+  "
+>
+    <div style="text-align: center;">
+        <h1>Login</h1>
+    </div>
+  <form method="POST" style="width: 50%; margin: auto" novalidate>
+    {% csrf_token %}
+    <!-- This code block is checking if there are any non-field errors in the form. Non-field errors are
+    errors that are not associated with any specific form field. -->
+    {% if form.non_field_errors %}
+    {% for er in form.non_field_errors %}
+    <p class ="bg-danger text-white p-3">{{er}}</p>
+    {% endfor %}
+    {% endif %}
+    <!-- {{form | crispy}} -->
+    {% for fm in form %} {{fm.label_tag}} {{fm}} {{fm.errors | striptags}}
+    <br />
+    {% endfor %}
+    <button class="btn btn-primary" type="submit">Login</button>
+    <br>
+    <small>Doesn't have an account? <a href="{% url 'signup' %}">Sign Up</a></small>
+  </form>
+</div>
+
+{% endblock %}

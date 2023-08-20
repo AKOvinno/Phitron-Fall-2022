@@ -1,0 +1,47 @@
+{% extends 'base.html' %} 
+{% load crispy_forms_tags %} 
+{% block title %} Update Profile {% endblock %} 
+
+{% block body %}
+<br /><br />
+<div
+  style="
+    width: 50%;
+    margin: auto;
+    background: rgb(218, 227, 241);
+    padding: 20px;
+  "
+>
+  <!-- The code block `{% if messages %} ... {% endif %}` is checking if there are any messages stored in
+  the `messages` variable from views. -->
+  {% if messages %} 
+  {% for m in messages %}
+  <p class="bg-success p-3 text-white">{{m}}</p>
+  {% endfor %} 
+  {% endif %}
+  <br />
+
+  <div style="text-align: center">
+    <h1>Update Profile</h1>
+  </div>
+
+  <br />
+  <form method="POST" style="width: 50%; margin: auto" novalidate>
+    {% csrf_token %}
+    <!-- This code block is checking if there are any non-field errors in the form. Non-field errors are
+    errors that are not associated with any specific form field. -->
+    {% if form.non_field_errors %} {% for er in form.non_field_errors %}
+    <p class="bg-danger text-white p-3">{{er}}</p>
+    {% endfor %} {% endif %}
+    <!-- {{form | crispy}} -->
+    {% for fm in form %} {{fm.label_tag}} {{fm}} {{fm.errors | striptags}}
+    <br />
+    {% endfor %}
+    <button class="btn btn-danger" type="submit">Save</button>
+    <br />
+  </form>
+  <br />
+</div>
+<br />
+
+{% endblock %}

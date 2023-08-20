@@ -1,0 +1,54 @@
+{% extends 'base.html' %} 
+
+{% load crispy_forms_tags %}
+
+{% block title %} Profile {% endblock %} 
+
+{% block body %}
+
+<div
+  style="
+    width: 50%;
+    margin: auto;
+    background: rgb(57, 84, 126);
+    padding: 20px;
+    text-align: center;
+  "
+>
+    <h1>Welcome {{user}}</h1>
+</div>
+<br>
+<div
+  style="
+    width: 50%;
+    margin: auto;
+    background: rgb(218, 227, 241);
+    padding: 20px;
+    text-align: center;
+  "
+>
+    <h1>Change Password</h1>
+    <a href="{% url 'pass_change' %}" class="btn btn-warning" type="submit">
+        With Old Password
+      </a>
+    <a href="{% url 'pass_change2' %}" class="btn btn-warning" type="submit">
+        Without Old Password
+      </a>
+</div>
+<br>
+<div
+  style="
+    width: 50%;
+    margin: auto;
+    background: rgb(218, 227, 241);
+    padding: 20px;
+    text-align: center;
+  "
+>
+<h1>Update Profile</h1>
+    <a href="{% url 'update_profile' %}" class="btn btn-warning" type="submit">
+    Update
+    </a>
+</div>
+
+{% endblock %}
