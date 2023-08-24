@@ -4,10 +4,44 @@
 
 {% block content %}
 
-<div style="width: 50%; margin: auto;">
-    <h1>
-        Welcome to Book Store Management System
-    </h1>
-</div>
+<style>
+    .centered-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: rgb(128, 179, 255);
+    }
+
+    .centered-content {
+      width: 50%;
+      height: 50%;
+      text-align: center;
+      opacity: 0; /* Initially hide the content */
+      animation: fadeIn 1.5s ease-in-out forwards; /* Apply the fade-in animation */
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+</style>
+<div class="centered-container">
+    <div class="centered-content">
+      <h1>Welcome to Bright Ideas Book Store</h1>
+      <h3>One stop solution of your Book Business</h3>
+      <br><br><br>
+      <h6> Owner's Name: {{name}}</h6>
+      <h6> Owner's Age: {{age}}</h6>
+      <h6> Owner's Roll: {{roll}}</h6>
+      <h6> Founder: {{founder}}</h6>
+    </div>
+  </div>
 
 {% endblock %}

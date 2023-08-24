@@ -9,6 +9,14 @@ from django.views.generic import TemplateView
 #     return render(request, 'base.html')
 
 # class based view
+class HomeTemplateView(TemplateView):
+    template_name = 'home.html'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context = {'name': 'Ashfaq Kadir Ovinno', 'age': 25}
+        print(kwargs)
+        context.update(kwargs)
+        return context
 
 
 def store_book(request):
