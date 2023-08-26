@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 {% block title %} Show Books {% endblock %} 
 {% block content %}
 <div style="width: 50%; margin: auto; text-align: center">
@@ -11,37 +11,37 @@
       <tr>
         <th scope="col">ID</th>
         <th scope="col">Book Name</th>
-        <th scope="col">Author Name</th>
+        <!-- <th scope="col">Author Name</th>
         <th scope="col">Category</th>
         <th scope="col">Entry Date</th>
         <th scope="col">Last Edition</th>
         <th scope="col">Update</th>
-        <th scope="col">Delete</th>
+        <th scope="col">Delete</th> -->
       </tr>
     </thead>
     <tbody>
       {% for item in book_list %}
       <tr>
         <th scope="row">{{item.id}}</th>
-        <td>{{item.book_name}}</td>
-        <td>{{item.author}}</td>
+        <td><a href="{% url 'book_details' item.id %}">{{item.book_name}}</a></td>
+        <!-- <td>{{item.author}}</td>
         <td>@{{item.category}}</td>
         <td>@{{item.first_pub}}</td>
         <td>@{{item.last_pub}}</td>
         <td>
-          <a href="{% url 'edit_book' id=item.id %}" class="btn btn-warning"
+          <a href="{% url 'edit_book' pk=item.id %}" class="btn btn-warning"
             >Edit</a
           >
         </td>
         <td>
-          <a href="{% url 'delete_book' id=item.id %}" class="btn btn-danger"
+          <a href="{% url 'delete_book' pk=item.id %}" class="btn btn-danger"
             >Delete</a
-        </td>
+        </td> -->
       </tr>
       {% endfor %}
     </tbody>
   </table>
-{% else %}
+  {% else %}
   <h3>No Data Available</h3>
   {% endif %}
 </div>
