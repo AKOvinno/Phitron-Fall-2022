@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Session</title>
+  </head>
+  <body>
+    <button><a href="{% url 'homepage' %}">Home</a></button>
+    <button><a href="{% url 'set_session' %}">Get Session</a></button>
+    <h1>Session is getting...</h1>
+    <h2>Information:</h2>
+    <p>{{name}}</p>
+    <p>{{age}}</p>
+    <p>{{language}}</p>
+    <button><a href="{% url 'delete_session' %}">Delete Session</a></button>
+  </body>
+</html>

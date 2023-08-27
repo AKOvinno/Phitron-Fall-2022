@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Cookie</title>
+  </head>
+  <body>
+    <button><a href="{% url 'homepage' %}">Home</a></button>
+
+    <h1>This is get cookie page</h1>
+    <h1>Cookie is getting...</h1>
+    <h4>{{name}}</h4>
+    <button><a href="{% url 'delete_cookie' %}">Delete Cookie</a></button>
+  </body>
+</html>
