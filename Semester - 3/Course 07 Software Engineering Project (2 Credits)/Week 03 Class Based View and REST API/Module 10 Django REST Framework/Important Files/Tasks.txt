@@ -1,0 +1,9 @@
+Tasks:
+
+1. API, REST API
+2. Frontend and Backend Folder Setup, Django REST Framework installaion
+3. making model
+4. making serializer
+5. handling request, response using APIview
+6. working with generic class view
+7. working with modelview set (Router)

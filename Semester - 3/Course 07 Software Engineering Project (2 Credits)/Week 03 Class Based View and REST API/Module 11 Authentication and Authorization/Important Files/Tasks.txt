@@ -1,0 +1,9 @@
+Tasks:
+1. Introduction to Postman Software
+2. How to protect api using Permissions
+3. How to use Custom Permission
+4. Introduction to Token Authentication
+5. Token Authentication - Login
+6. Token Authentication - Register(part 1)
+7. Token Authentication - Register(part 2)
+8. Token Authentication - Logout
