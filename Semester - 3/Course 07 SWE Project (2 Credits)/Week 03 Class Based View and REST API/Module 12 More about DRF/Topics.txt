@@ -1,0 +1,8 @@
+Topics:
+
+14.1 Introduction to Filtering
+14.2 Working With Django Filters
+14.3 Working With SearchFilter & OrderingFilter
+14.4 Introduction to Pagination - PageNumberPagination
+14.5 Working with LimitOffsetPagination & CursorPagination
+14.6 Django Rest Framework Summary and Ending
