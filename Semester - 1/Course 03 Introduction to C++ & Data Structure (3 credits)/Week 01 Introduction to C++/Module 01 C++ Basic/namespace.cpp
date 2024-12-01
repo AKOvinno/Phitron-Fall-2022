@@ -21,7 +21,10 @@ namespace info
 int main()
 {
     int a = 4, b = 5;
+    cout << "X which is outside info: " << x << "\n"; /// 5
+    cout << "X which is inside info: " << info :: x << "\n";
 
+    cout << func(a, b) << "\n"; /// 9
     cout << info :: func(a, b) << "\n";
     return 0;
 }
