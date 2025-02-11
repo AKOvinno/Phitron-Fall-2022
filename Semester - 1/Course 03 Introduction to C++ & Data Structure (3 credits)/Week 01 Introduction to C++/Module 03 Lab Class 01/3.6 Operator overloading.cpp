@@ -7,10 +7,10 @@ public:
     string name;
     int std_id;
     int age;
-    Student()
-    {
-
-    }
+//    Student()
+//    {
+//
+//    }
     Student(string name, int std_id, int age)
     {
         this -> name = name;

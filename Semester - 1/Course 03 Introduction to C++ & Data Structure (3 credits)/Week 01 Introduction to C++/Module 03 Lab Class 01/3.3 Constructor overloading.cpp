@@ -13,7 +13,7 @@ public:
     // Constructor
     Student(string name, int id, int age, string fatherName, string motherName)
     {
-        this -> name = name;
+        name = name;
         std_id = id;
         this -> age = age;
         fathers_name = fatherName;

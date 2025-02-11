@@ -18,11 +18,12 @@ public:
         cout << "Father's Name: " << fathers_name << "\n";
         cout << "Mother's Name: " << mothers_name << "\n";
     }
-    void setInformation(string s, int id, int ag, string fatherName, string motherName) // setting information to access private properties
+    // setting information to access private properties
+    void setInformation(string s, int id, int age, string fatherName, string motherName)
     {
         name = s;
         std_id = id;
-        age = ag;
+        age = age;
         fathers_name = fatherName;
         mothers_name = motherName;
     }

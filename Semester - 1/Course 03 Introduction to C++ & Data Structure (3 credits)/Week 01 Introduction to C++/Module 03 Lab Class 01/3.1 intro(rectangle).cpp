@@ -5,7 +5,6 @@ class Rectangle
 {
 public:
     int width, height;
-
     // area calculation
     int calculate_area()
     {

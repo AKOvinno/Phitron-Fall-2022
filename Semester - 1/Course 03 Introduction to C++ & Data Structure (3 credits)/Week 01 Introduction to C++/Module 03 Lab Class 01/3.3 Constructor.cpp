@@ -12,12 +12,12 @@ public:
 
     // Main task of the constructor is that it sets the variables of the class
     // we must setup these variables otherwise the class won't be build.
-    // Constructor won't allow to make the class
-    Student(string s, int id, int ag, string fatherName, string motherName)
+    // Constructor won't allow to make the class if variables does not set
+    Student(string s, int id, int age, string fatherName, string motherName)
     {
         name = s;
         std_id = id;
-        age = ag;
+        age = age;
         fathers_name = fatherName;
         mothers_name = motherName;
     }

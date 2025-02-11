@@ -5,7 +5,7 @@ int main()
 {
     int n;
     cin >> n;
-    int *x = new int[n];
+    int *x = new int[n]; // will take memory from heap
     for(int i = 0; i < n; i++) {
         cin >> x[i];
     }
