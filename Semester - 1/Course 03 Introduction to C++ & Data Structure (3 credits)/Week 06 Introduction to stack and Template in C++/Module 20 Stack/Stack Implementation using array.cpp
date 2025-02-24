@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-// we can't declare in inside class
+// we can't declare it inside class
 const int MAX_SIZE = 500;
 // stack using static array
 class Stack

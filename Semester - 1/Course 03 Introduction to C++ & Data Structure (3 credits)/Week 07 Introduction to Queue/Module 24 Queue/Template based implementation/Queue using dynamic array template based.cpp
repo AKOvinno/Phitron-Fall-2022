@@ -23,7 +23,7 @@ public:
         if(l > r) {
             T *tmp = new T[array_cap];
             int idx = 0;
-            for(int i = 1; i < array_cap; i++) {
+            for(int i = l; i < array_cap; i++) {
                 tmp[idx] = a[i];
                 idx++;
             }

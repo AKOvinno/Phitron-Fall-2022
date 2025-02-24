@@ -95,6 +95,12 @@ public:
 };
 int main()
 {
+    DoublyLinkedList<char>dl;
+    dl.InsertAtHead('O');
+    dl.InsertAtHead('V');
+    dl.InsertAtHead('I');
+    dl.DeleteAtHead();
+
     Stack <double> st;
     st.push(3.5);
     st.push(3.6);
