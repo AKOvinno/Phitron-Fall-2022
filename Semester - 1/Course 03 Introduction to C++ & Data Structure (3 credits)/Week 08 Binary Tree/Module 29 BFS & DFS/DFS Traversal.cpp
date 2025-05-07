@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+ #include<bits/stdc++.h>
 using namespace std;
 
 class node
@@ -91,4 +91,3 @@ int main()
     bt.Postorder(bt.root);
     return 0;
 }
-

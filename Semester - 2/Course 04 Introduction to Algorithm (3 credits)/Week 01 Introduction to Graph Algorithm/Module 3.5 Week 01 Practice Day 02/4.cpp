@@ -33,13 +33,7 @@ void Adj_list_to_Adj_mat()
     int nodes;
     cout << "No. of nodes: ";
     cin >> nodes;
-    int matrix[nodes][nodes];
-
-    for(int i = 0; i < nodes; i++) {
-        for(int j = 0; j < nodes; j++) {
-            matrix[i][j] = 0;
-        }
-    }
+    int matrix[nodes][nodes] = {};
 
     for(int i = 0; i < nodes; i++) {
         int n;

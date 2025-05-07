@@ -147,7 +147,7 @@ public:
             tmp = tmp->left;
         }
         int saved = tmp->value;
-        Delete(saved);
+        Delete(saved); // It will be deleted by case 1 or 2
         cur->value = saved;
     }
 };

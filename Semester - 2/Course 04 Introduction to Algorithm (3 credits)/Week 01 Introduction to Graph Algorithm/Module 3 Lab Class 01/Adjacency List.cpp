@@ -46,9 +46,9 @@ using namespace std;
 int main()
 {
     int nodes = 4;
-    vector <int> adj_list[nodes];
+    vector <int> adj_list[nodes]; // space complexity O(n)
 
-    // O(E) -> if no. of edge if low
+    // O(E) -> if no. of edge is low
     // O(E * 2) = (E) // Worst Case = O(n^2)
     adj_list[0] = {1};
     adj_list[1] = {0, 2, 3};

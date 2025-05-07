@@ -4,10 +4,11 @@ Graph Representation
 ==================
 Topic: Weighted Adjacency List
 
-
+       2
 0 ------ 1
-         /   \
+        4/   \7
         2 --- 3
+            8
 
 0 -> (1, 2)
 1 -> (2, 4)

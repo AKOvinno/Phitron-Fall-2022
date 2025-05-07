@@ -10,12 +10,7 @@ void Edge_list_to_Adj_mat()
     cout << "No. of edges: ";
     cin >> edges;
 
-    int matrix[nodes][nodes];
-    for(int i = 0; i < nodes; i++) {
-        for(int j = 0; j < nodes; j++) {
-            matrix[i][j] = 0;
-        }
-    }
+    int matrix[nodes][nodes] = {};
     for(int i = 0; i < edges; i++) {
         int u, v;
         cin >> u >> v;

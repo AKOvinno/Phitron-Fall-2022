@@ -93,7 +93,7 @@ public:
         }
     }
 };
-// Time complexity O(n)
+// Time complexity O(nlogn)
 vector <int> heap_sort(vector <int> a)
 {
     MaxHeap h;

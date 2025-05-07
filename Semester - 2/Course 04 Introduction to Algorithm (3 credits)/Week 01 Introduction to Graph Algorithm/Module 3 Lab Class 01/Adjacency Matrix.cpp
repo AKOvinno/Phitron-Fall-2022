@@ -48,7 +48,7 @@ int main()
 {
     const int nodes = 4;
     int edges = 8;
-    int matrix[nodes][nodes] = {}; // It will initialize 0 with const
+    int matrix[nodes][nodes] = {}; // It will initialize 0
 
 
     for(int i = 0; i < edges; i++) {
