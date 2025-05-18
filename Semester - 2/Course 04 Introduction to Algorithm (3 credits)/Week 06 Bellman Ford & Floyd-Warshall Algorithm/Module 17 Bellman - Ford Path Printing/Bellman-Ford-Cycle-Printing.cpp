@@ -1,9 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 const int N = 1e5 + 5;
-const int INF = 1e9;
+const long long INF = 1e18;
 vector<pair<int, int>>adj_list[N];
-int d[N];
+long long d[N];
+int parent[N];
 int main()
 {
     int n, m;
@@ -19,33 +20,50 @@ int main()
     int src = 1;
     d[src] = 0;
     bool negative_cycle = false;
+    int last_updated_node = -1;
     for(int i = 1; i <= n; i++) {
         for(int node = 1; node <= n; node++) {
-            for(auto adj_node : adj_list[node]) {
+            for(auto adj_node: adj_list[node]) {
                 int u = node;
                 int v = adj_node.first;
                 int w = adj_node.second;
-                // Relaxation
+
                 if(d[u] + w < d[v]) {
                     d[v] = d[u] + w;
+                    parent[v] = u;
                     if(i == n) {
-                        // during nth iteration it's relaxing
-                        // That's means it's changing after n-1 iteration
-                        // That's why making it trues
                         negative_cycle = true;
+                        last_updated_node = v;
                     }
                 }
             }
         }
     }
     if(negative_cycle == true) {
-        cout << "Graph has negative cycle\n";
+        cout << "YES\n";
+        int selected_node = last_updated_node;
+        for(int i = 1; i <= n-1; i++) {
+            selected_node = parent[selected_node];
+        }
+        int first_node = selected_node;
+        vector<int>cycle;
+        cycle.push_back(selected_node);
+        while(true) {
+            selected_node = parent[selected_node];
+            cycle.push_back(selected_node);
+            if(selected_node == first_node) {
+                break;
+            }
+        }
+        reverse(cycle.begin(), cycle.end());
+        for(auto node : cycle) {
+            cout << node << " ";
+        }
+        cout << "\n";
     }
     else {
-        for(int i = 1; i <= n; i++) {
-            cout << d[i] << " ";
-        }
+        cout << "NO\n";
     }
-    cout << "\n";
     return 0;
 }
+
