@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Time Complexity: O(2^n)
 int fibo(int n)
 {
     if(n <= 2)
